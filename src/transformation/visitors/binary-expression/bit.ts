@@ -72,6 +72,7 @@ export function transformBinaryBitOperation(
         case LuaTarget.LuaJIT:
             return transformBinaryBitLibOperation(node, left, right, operator, "bit");
 
+        case LuaTarget.Luau:
         case LuaTarget.Lua52:
             return transformBinaryBitLibOperation(node, left, right, operator, "bit32");
         default:
@@ -118,6 +119,7 @@ export function transformUnaryBitOperation(
         case LuaTarget.LuaJIT:
             return transformUnaryBitLibOperation(node, expression, operator, "bit");
 
+        case LuaTarget.Luau:
         case LuaTarget.Lua52:
             return transformUnaryBitLibOperation(node, expression, operator, "bit32");
 
