@@ -9,7 +9,13 @@ repeat
     do
         continue
     end
-until not false"
+until not false
+a = bit32.rshift(34193128, 23)
+b = bit32.lshift(34193128, 23)
+c = bit32.bxor(34193128, 23)
+d = bit32.band(34193128, 23)
+e = bit32.bnot(d)
+f = bit32.bor(34193128, 23)"
 `;
 
 exports[`Transformation (blockScopeVariables) 1`] = `
